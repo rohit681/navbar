@@ -1,7 +1,7 @@
 /** @format */
 
 import React, { useState } from "react";
-import "../Styles/home.css";
+import "./css/home.css";
 
 const Home = () => {
   const [info, setInfo] = useState({
@@ -25,11 +25,15 @@ const Home = () => {
     e.preventDefault();
     if (!info.fname || !info.lname || !info.email || !info.phone)
       alert("Please fill all the required feild");
-    else if (info.phone.length < 10) alert("Ivalid Phone number");
+    else if (info.phone.length !== 10) alert("Ivalid Phone number");
     else {
       const arr = info.email.split("@");
       console.log(arr);
-      if (arr.length !== 2 || arr[1].includes(".com"))
+      if (
+        arr.length !== 2 ||
+        !arr[1].includes(".com") &&
+        !arr[1].includes(".in")
+      )
         alert("please enter a valid email");
       else {
         setDetails(info);

@@ -1,7 +1,7 @@
 /** @format */
 
 import React, { useState } from "react";
-import "../Styles/search.css"
+import "./css/search.css";
 
 function Search() {
   const [search, setSearch] = useState("");
@@ -15,6 +15,7 @@ function Search() {
     setSearch(e);
   };
 
+ 
   const startSearch = async (e) => {
     e.preventDefault();
     setSearched(true);
@@ -59,7 +60,9 @@ function Search() {
               height: "100%",
               display: "flex",
               flexDirection: "column",
-              marginLeft:"42%"
+              marginLeft:"41%",
+              marginRight:"41%"
+
             }}
           >
             <h1 style={{margin:"0.2%"}}>{search}</h1>

@@ -1,0 +1,29 @@
+.a{
+    margin:10px;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    list-style-type: none;
+    
+}
+
+
+        .navbar{
+        height: 100%;
+            width: 13%;
+            background: black;
+            position: fixed;
+            left:-100%;
+            top: 0px;
+            transition:all 700ms ease-out;
+    }
+
+    .navbarVisible{
+        height: 100%;
+            width: 13%;
+            background: black;
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            transition: all 700ms ease-out;
+    }
